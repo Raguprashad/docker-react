@@ -1,9 +1,7 @@
 sudo: required
 services :
   - docker
-
 before_install :
   - docker build -t raguprashad/docker-react -f Dockerfile.dev .
-
- script :
-   - docker run raguprashad/docker-react npm run test -- -- coverage
+  script :
+ - docker run raguprashad/docker-react npm run test -- -- coverage
